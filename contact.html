@@ -36,7 +36,6 @@
       main {
         padding: 20px;
       }
-
       /* Modal styles */
       .modal {
         display: none; /* Hidden by default */
@@ -100,6 +99,15 @@
     </style>
   </head>
   <body>
+    <!-- Facebook SDK: Place this immediately after the opening body tag -->
+    <div id="fb-root"></div>
+    <script
+      async
+      defer
+      crossorigin="anonymous"
+      src="https://connect.facebook.net/en_US/sdk.js#xfbml=1&version=v22.0"
+    ></script>
+
     <header>
       <nav class="top-menu">
         <ul>
@@ -150,16 +158,28 @@
         <div class="modal-content">
           <span class="close" id="closeFacebook">&times;</span>
           <h3>Facebook</h3>
-          <div id="fb-page">
-            <iframe
-              src="https://www.facebook.com/p/Duck-Creek-Pancake-House-100063572801372/"
-              width="100%"
-              height="600"
-              style="border: none; overflow: hidden"
-              scrolling="no"
-              frameborder="0"
-              allowfullscreen="true"
-            ></iframe>
+          <!-- Facebook Page Plugin code from Facebook -->
+          <div
+            class="fb-page"
+            data-href="https://www.facebook.com/p/Duck-Creek-Pancake-House-100063572801372/"
+            data-tabs="timeline"
+            data-width=""
+            data-height=""
+            data-small-header="false"
+            data-adapt-container-width="true"
+            data-hide-cover="false"
+            data-show-facepile="true"
+          >
+            <blockquote
+              cite="https://www.facebook.com/p/Duck-Creek-Pancake-House-100063572801372/"
+              class="fb-xfbml-parse-ignore"
+            >
+              <a
+                href="https://www.facebook.com/p/Duck-Creek-Pancake-House-100063572801372/"
+              >
+                Duck Creek Pancake House
+              </a>
+            </blockquote>
           </div>
         </div>
       </div>
@@ -169,19 +189,18 @@
         <h2>Our Location</h2>
         <p><strong>Duck Creek Pancake House</strong></p>
         <p>
-          123 Main Street<br />
-          Bettendorf, IA 52722
+          4405 State Street<br />
+          Riverdale, IA 52722
         </p>
         <!-- Embedded Google Maps view; update src with your restaurant's map embed link -->
         <iframe
-          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3168.956187595759!2d-122.0842496846918!3d37.42206597982565!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x808fb0a3bf0e4d1b%3A0x6d3f9c0c0a2b7e70!2sGoogleplex!5e0!3m2!1sen!2sus!4v1615250000000!5m2!1sen!2sus"
+          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2986.669573353298!2d-90.47650812425847!3d41.533097586945!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x87e2373bd610eefb%3A0x3979348eb9717388!2sDuck%20Creek%20Pancake%20House!5e0!3m2!1sen!2sus!4v1740770194845!5m2!1sen!2sus"
           width="600"
           height="450"
           style="border: 0"
           allowfullscreen=""
           loading="lazy"
-        >
-        </iframe>
+        ></iframe>
       </section>
     </main>
 
