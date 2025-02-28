@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Contact - Duck Creek Pancake House</title>
+    <link rel="stylesheet" href="styles.css" />
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        margin: 0;
+        padding: 0;
+      }
+      header {
+        background: #f8f8f8;
+        padding: 10px 0;
+      }
+      .top-menu ul {
+        display: flex;
+        justify-content: center;
+        list-style: none;
+        padding: 0;
+        margin: 0;
+      }
+      .top-menu ul li {
+        margin: 0 15px;
+      }
+      .top-menu ul li a {
+        text-decoration: none;
+        color: #333;
+      }
+      .top-menu ul li a.active {
+        font-weight: bold;
+        color: #d9534f;
+      }
+      main {
+        padding: 20px;
+      }
+
+      /* Modal styles */
+      .modal {
+        display: none; /* Hidden by default */
+        position: fixed;
+        z-index: 100;
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: 100%;
+        overflow: auto;
+        background: rgba(0, 0, 0, 0.5);
+      }
+      .modal-content {
+        background: #fff;
+        margin: 10% auto;
+        padding: 20px;
+        width: 80%;
+        max-width: 600px;
+        position: relative;
+        border-radius: 4px;
+      }
+      .close {
+        position: absolute;
+        top: 10px;
+        right: 15px;
+        color: #aaa;
+        font-size: 24px;
+        font-weight: bold;
+        cursor: pointer;
+      }
+      /* Button styling for pop-up triggers */
+      .popup-btn {
+        display: inline-block;
+        padding: 10px 20px;
+        margin: 10px 0;
+        background-color: #d9534f;
+        color: #fff;
+        text-decoration: none;
+        border-radius: 4px;
+      }
+      /* Footer styling */
+      footer {
+        background: #f8f8f8;
+        text-align: center;
+        padding: 15px 0;
+        margin-top: 30px;
+      }
+      .footer-menu {
+        list-style: none;
+        padding: 0;
+        margin: 10px 0 0;
+      }
+      .footer-menu li {
+        display: inline;
+        margin: 0 10px;
+      }
+      .footer-menu li a {
+        text-decoration: none;
+        color: #333;
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <nav class="top-menu">
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="menu.html">Menu</a></li>
+          <li><a href="gallery.html">Gallery</a></li>
+          <li><a href="order.html">Order</a></li>
+          <li><a href="contact.html" class="active">Contact</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <main>
+      <h1>Contact Duck Creek Pancake House</h1>
+      <p>Learn what our customers are saying and find our locations.</p>
+
+      <section class="reviews">
+        <h2>Customer Reviews</h2>
+        <button class="popup-btn" id="openReviews">View Google Reviews</button>
+      </section>
+
+      <div id="reviewsModal" class="modal">
+        <div class="modal-content">
+          <span class="close" id="closeReviews">&times;</span>
+          <h3>Google Reviews</h3>
+          <p>
+            <iframe
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d14186.681448607484!2d-90.48423292639949!3d41.533093140505024!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x87e2373bd610eefb%3A0x3979348eb9717388!2sDuck%20Creek%20Pancake%20House!5e1!3m2!1sen!2sus!4v1740768658282!5m2!1sen!2sus"
+              width="600"
+              height="450"
+              style="border: 0"
+              allowfullscreen=""
+              loading="lazy"
+              referrerpolicy="no-referrer-when-downgrade"
+            ></iframe>
+          </p>
+        </div>
+      </div>
+
+      <section class="facebook">
+        <h2>Our Facebook Page</h2>
+        <button class="popup-btn" id="openFacebook">
+          View Our Facebook Page
+        </button>
+      </section>
+
+      <div id="facebookModal" class="modal">
+        <div class="modal-content">
+          <span class="close" id="closeFacebook">&times;</span>
+          <h3>Facebook</h3>
+          <div id="fb-page">
+            <iframe
+              src="https://www.facebook.com/p/Duck-Creek-Pancake-House-100063572801372/"
+              width="100%"
+              height="600"
+              style="border: none; overflow: hidden"
+              scrolling="no"
+              frameborder="0"
+              allowfullscreen="true"
+            ></iframe>
+          </div>
+        </div>
+      </div>
+
+      <!-- Location Information Section -->
+      <section class="location">
+        <h2>Our Location</h2>
+        <p><strong>Duck Creek Pancake House</strong></p>
+        <p>
+          123 Main Street<br />
+          Bettendorf, IA 52722
+        </p>
+        <!-- Embedded Google Maps view; update src with your restaurant's map embed link -->
+        <iframe
+          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3168.956187595759!2d-122.0842496846918!3d37.42206597982565!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x808fb0a3bf0e4d1b%3A0x6d3f9c0c0a2b7e70!2sGoogleplex!5e0!3m2!1sen!2sus!4v1615250000000!5m2!1sen!2sus"
+          width="600"
+          height="450"
+          style="border: 0"
+          allowfullscreen=""
+          loading="lazy"
+        >
+        </iframe>
+      </section>
+    </main>
+
+    <!-- Footer -->
+    <footer>
+      <p>&copy; 2025 Duck Creek Pancake House. All Rights Reserved.</p>
+      <ul class="footer-menu">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="menu.html">Menu</a></li>
+        <li><a href="gallery.html">Gallery</a></li>
+        <li><a href="order.html">Order</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </footer>
+
+    <script>
+      // JavaScript to control modals
+
+      // Google Reviews Modal
+      const reviewsModal = document.getElementById("reviewsModal");
+      const openReviewsBtn = document.getElementById("openReviews");
+      const closeReviewsBtn = document.getElementById("closeReviews");
+
+      openReviewsBtn.addEventListener("click", () => {
+        reviewsModal.style.display = "block";
+      });
+      closeReviewsBtn.addEventListener("click", () => {
+        reviewsModal.style.display = "none";
+      });
+
+      // Facebook Modal
+      const facebookModal = document.getElementById("facebookModal");
+      const openFacebookBtn = document.getElementById("openFacebook");
+      const closeFacebookBtn = document.getElementById("closeFacebook");
+
+      openFacebookBtn.addEventListener("click", () => {
+        facebookModal.style.display = "block";
+      });
+      closeFacebookBtn.addEventListener("click", () => {
+        facebookModal.style.display = "none";
+      });
+
+      // Close modals when clicking outside the modal content
+      window.addEventListener("click", (e) => {
+        if (e.target == reviewsModal) {
+          reviewsModal.style.display = "none";
+        }
+        if (e.target == facebookModal) {
+          facebookModal.style.display = "none";
+        }
+      });
+    </script>
+  </body>
+</html>
